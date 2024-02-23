@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: 'Verdana', sans-serif;
+    color: #006400; /* Dark green */
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: auto;
+  }
+  
