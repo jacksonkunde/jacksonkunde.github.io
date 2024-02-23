@@ -1,24 +1,151 @@
-.container {
+.navbar {
+    background-color: #91c091; /* Lighter green */
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
-  }
-  
-  h1 {
-    font-family: 'Verdana', sans-serif;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px; /* Increase margin for better spacing */
+}
+
+.navbar a {
     color: #006400; /* Dark green */
+    text-decoration: none;
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navbar a:hover {
+    color: #004d00; /* Darker green on hover */
+}
+
+body {
+    font-family: 'DM Serif Display';
+    background-color: #eafbea;
+}
+
+h1 {
+    font-size: 64px;
+    color: #006400;
     margin-bottom: 20px;
-  }
-  
-  .image-container {
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.container#experiences h2 {
+    font-size: 40px;
+    color: #006400; /* Dark green */
+    margin-bottom: 30px; /* Increase margin for better spacing */
+    text-align: left; /* Align the text to the left */
+}
+
+.image-container {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-image {
+    background-color: #91c091;
+    border: 2px solid #006400;
+}
+
+.profile-image {
     width: 100%;
     height: auto;
-  }
-  
+    font-size: 16px;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+.experience {
+    display: flex;
+    margin: 10px;
+    background-color: #fcfffc;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.date {
+    margin-left: auto;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.uw-madison-img,
+.waisi-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.waisi-img {
+    border-radius: 30%;
+}
+
+.thumbnail {
+    flex: 0 0 200px; /* Keep the width to 200px */
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: -60px; /* Reduce the margin */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail img {
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 50px);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+
+.description-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fcfffc
+}
+
+.description {
+    padding: 20px;
+}
+.details {
+    flex-grow: 1; /* Allow details to take remaining space */
+    padding: 20px; /* Add padding to the details */
+}
+.details a {
+    color: #006400; /* Dark green */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
