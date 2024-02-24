@@ -1,6 +1,6 @@
 .navbar {
-    background-color: #91c091; /* Lighter green */
-    color: #ffffff;
+    background-color: #006400;
+    color: #fcfffc;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
@@ -18,7 +18,7 @@
 }
 
 .navbar a {
-    color: #006400; /* Dark green */
+    color: #eafbea; 
     text-decoration: none;
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
@@ -26,7 +26,7 @@
 }
 
 .navbar a:hover {
-    color: #004d00; /* Darker green on hover */
+    color: #ffffff; /* Darker green on hover */
 }
 
 body {
