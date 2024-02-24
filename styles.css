@@ -45,7 +45,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.container#experiences h2 {
+.container#experience h2 {
     font-size: 40px;
     color: #006400; /* Dark green */
     margin-bottom: 30px; /* Increase margin for better spacing */
@@ -149,3 +149,69 @@ h2 {
     font-weight: bold; /* Make the text bold */
 }
 
+.resume-container {
+    background-color: #fcfffc; /* Match the background color of experience containers */
+    padding: 5px;
+    border-radius: 20px; /* Match the border radius of experience containers */
+    margin: 10px; /* Match the margin of experience containers */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Match the box shadow of experience containers */
+}
+.resume-container a {
+    color: #006400; /* Dark green */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Projects Section */
+.project-thumbnail {
+    flex: 0 0 200px; /* Keep the width to 200px */
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: -60px; /* Reduce the margin */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-thumbnail img {
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 50px);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+
+.container#projects h2 {
+    font-size: 40px;
+    color: #006400; /* Dark green */
+    margin-bottom: 30px; /* Increase margin for better spacing */
+    text-align: left; /* Align the text to the left */
+}
+.project-container {
+    background-color: #fcfffc; /* Match the background color of experience containers */
+    padding: 5px;
+    border-radius: 20px; /* Match the border radius of experience containers */
+    margin: 10px; /* Match the margin of experience containers */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Match the box shadow of experience containers */
+}
+.project-container a {
+    color: #006400; /* Dark green */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+.experience {
+    display: flex;
+    margin: 10px;
+    background-color: #fcfffc;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s; /* Add transition for smooth scaling */
+}
+
+.experience:hover {
+    transform: scale(1.05); /* Enlarge the container on hover */
+}
