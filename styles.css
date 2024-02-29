@@ -216,3 +216,11 @@ h2 {
 .experience:hover {
     transform: scale(1.05); /* Enlarge the container on hover */
 }
+
+/* Specific project styles */
+.overview-container {
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 10px; /* Add padding */
+    background-color: #ffffff; /* Optional: add background color */
+  }

@@ -6,6 +6,9 @@
   <title>Project Title</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="resources/ai_snoopy.png" type="image/png">
+  <!-- Include MathJax script -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
   
 <body>
@@ -20,17 +23,31 @@
 
   <div class="container">
     <h1>Testing Generalization Bounds: How Good Is Theory in Practice?</h1>
-    
     <div class="project-details">
         <div class="description-container">
-            <img src="path/to/project/image.jpg" alt="Project Image" class="project-img">
+            <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/collected_gen_bounds.png?raw=true" alt="Project Image" class="project-img" style="max-width: 75%; height: auto;">
         </div>
         <div class="description-container">
             <h2>Project Overview</h2>
-            <p></p>
+            <div class="overview-container">
+                <p>
+                  Researchers have sought to understand whether there are any provable guarantees regarding 
+                  how well a model will generalize. That is, how well your training accuracy will transfer to your test accuracy. 
+                  Researchers have formulated a variety of principled approaches to determine this bound, such as the Vapnik-Chervonenkis-dimension (VC-dimension)
+                  and the Rademacher complexity. The math guiding these bounds is quite complex. Interestingly, we can develop a similar quality bound
+                  with a much simpler approach using Hoeffding's inequality.
+                </p>
+  
+                <p>
+                  Going over the details quickly:
+                  \[ P(\epsilon_{\text{gen}}[h] \geq \epsilon) \leq 2\cdot e^{-2\epsilon^2} \]
+                  Applying the union bound, we can bound any member of our hypothesis class by \( |\mathcal{H}| \cdot 2\cdot e^{-2\epsilon^2} \)
+                  We can then show that for any element in our hypothesis class \( \epsilon_{\text{gen}} = O(\sqrt{\frac{d}{n}}) \), where \( d \) is the parameter count and \( n \) is the number of 'training examples'.
+                  Given this bound, it is only reasonable to ask how well this bound holds in practice. This project seeks to answer that question.
+                </p>
+              </div>
         </div>
     </div>
-
   </div>
 </body>
 </html>
