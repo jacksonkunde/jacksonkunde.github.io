@@ -203,6 +203,11 @@ h2 {
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make the text bold */
 }
+.project-img {
+    max-width: 95%;
+    height: auto;
+}
+
 .experience {
     display: flex;
     margin: 10px;

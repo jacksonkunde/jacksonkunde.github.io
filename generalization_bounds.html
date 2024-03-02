@@ -16,13 +16,16 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#experience">Experiences</a></li>
-            <li><a href="#projects.html">Projects</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="resources/kunde_jackson_resume_2024.pdf" target="_blank">Resume</a></li>
         </ul>
     </nav>
 
   <div class="container">
     <h1>Testing Generalization Bounds: How Good Is Theory in Practice?</h1>
+    <a href="https://github.com/jacksonkunde/generalization_bounds" target="_blank">
+        <img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" alt="GitHub Logo" style="width: 64px; height: 64px;">
+      </a>
     <div class="project-details">
         <div class="description-container">
             <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/collected_gen_bounds.png?raw=true" alt="Project Image" class="project-img" style="max-width: 75%; height: auto;">
@@ -46,6 +49,55 @@
                   Given this bound, it is only reasonable to ask how well this bound holds in practice. This project seeks to answer that question.
                 </p>
               </div>
+        </div>
+        <div class="description-container">
+            <h3>Emperical Setup</h3>
+            <div class="overview-container">
+                <p>
+                    To explore how well this generalization bound holds in practice, I trained a linear binary classifier, a linear multi-class classifier, and a neural network with a single hidden layer on MNIST dataset 
+                    (the binary classifier was trainined only on the 0s and 1s of MNIST). First, I seperated the dataset into train and test data. Then for each classifier I trained on subsets of the 
+                    training data containing \(n\) data points, tested on the fixed test data, and recorded the training and test loss as well as the generalization gap (train accuracy - test accuracy).
+                    To ensure that the results were not due to the specific train-test split, I repeated the experiment 5 times with a random data shuffled each time. The results for each model are shown below.
+                </p>
+            </div>
+        </div>
+        <!-- Subsection for Single layer NN -->
+        <div class="description-container">
+            <h2>Single Layer NN</h2>
+            <div>
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_SLNN.png?raw=true" alt="Single Layer NN Generalization Gap" class="project-img">
+                <!-- <p class="image-description">Description for Image 1</p> -->
+            </div>
+            <div>
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_loss_SLNN.png?raw=true" alt="Single Layer NN Train-Test Loss" class="project-img">
+                <!-- <p class="image-description">Description for Image 2</p> -->
+            </div>
+            </div>
+        </div>
+        <!-- Subsection for Multi-class Linear Classifier -->
+        <div class="description-container">
+            <h2>Multi-class Linear Classifier</h2>
+            <div>
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_multiclass.png?raw=true" alt="Multi-class Linear Classifier Generalization Gap" class="project-img">
+                <!-- <p class="image-description">Description for Image 1</p> -->
+            </div>
+            <div>
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_loss_multiclass.png?raw=true" alt="Multi-class Linear Classifier Train-Test Loss" class="project-img">
+                <!-- <p class="image-description">Empirical </p> -->
+            </div>
+
+        </div>
+        <!-- Subsection for Binary Class Linear Classifier -->
+        <div class="description-container">
+            <h2>Binary Class Linear Classifier</h2>
+            <div>
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_binary.png?raw=true" alt="Binary Class Linear Classifier Generalization Gap" class="project-img">
+                <!-- <p class="image-description">Description for Image 1</p> -->
+            </div>
+            <div>
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_gap_binary.png?raw=true" alt="Binary Class Linear Classifier Train-Test Loss" class="project-img">
+                <!-- <p class="image-description">Description for Image 2</p> -->
+            </div>
         </div>
     </div>
   </div>
