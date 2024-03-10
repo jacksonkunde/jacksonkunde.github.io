@@ -1,33 +1,79 @@
 .navbar {
-    background-color: #006400;
+    background-color: rgba(0, 100, 0, 0.9);
     color: #fcfffc;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border-radius: 7px;
+    /* background: linear-gradient(to bottom, #006400, #cffecf); */
+  }
+.social-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar ul {
+.social-links a {
+    color: #333; /* Adjust as needed */
+    text-decoration: none;
+    margin-left: 10px; /* Add some spacing between icons */
+}
+  
+  .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-.navbar li {
+  }
+  
+  .navbar li {
     display: inline;
-    margin: 0 20px; /* Increase margin for better spacing */
-}
-
-.navbar a {
-    color: #eafbea; 
+    margin: 0 20px;
+  }
+  
+  .navbar a {
+    color: #eafbea;
     text-decoration: none;
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
-    transition: color 0.3s; /* Smooth transition for color change */
-}
+    /* transition: color 0.3s; */
 
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Add this line */
+  }
+  
+.navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fcfffc;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
 .navbar a:hover {
-    color: #ffffff; /* Darker green on hover */
-}
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+  
+.navbar a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .container {
+    padding-top: 128px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
 body {
     font-family: 'DM Serif Display', serif;
@@ -150,6 +196,12 @@ h2 {
     font-weight: bold; /* Make the text bold */
 }
 
+.personal a {
+    color: #006400; /* Dark green */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
 .resume-container {
     background-color: #fcfffc; /* Match the background color of experience containers */
     padding: 5px;
@@ -229,3 +281,76 @@ h2 {
     padding: 10px; /* Add padding */
     background-color: #ffffff; /* Optional: add background color */
   }
+/* about me page */
+.personal .container {
+    display: flex;
+    flex-direction: column;
+}
+h2.personal {
+    color: #006400;
+    text-align: left;
+}
+
+
+.personal.description-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.personal.text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.personal.image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.personal.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Course List Page */
+.course .container {
+    max-width: 1200px; /* Adjusted max-width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Changed justify-content to center */
+    gap: 20px; /* Add gap between the boxes */
+}
+
+.course .description-container {
+    width: calc(40% - 20px); /* Adjusted width to take up more space */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fcfffc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course .description-container h2 {
+    font-size: 20px; /* Adjust the font size for the course title */
+    margin-bottom: 10px; /* Add margin bottom for better spacing */
+}
+
+.course .description-container p {
+    font-size: 16px; /* Adjust the font size for the course description */
+}
+
+@media (max-width: 768px) {
+    .course .description-container {
+        width: calc(90% - 20px); /* Adjust the width for smaller screens */
+    }
+}

@@ -6,6 +6,8 @@
   <title>Projects</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="resources/ai_snoopy.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
   
 <body>
@@ -14,9 +16,14 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#experience">Experiences</a></li>
             <li><a href="projects.html">Projects</a></li>
+            <li><a href="personal.html">About Me</a></li>
             <li><a href="resources/kunde_jackson_resume_2024.pdf" target="_blank">Resume</a></li>
+            <li class="social-links">
+                <a href="https://www.linkedin.com/in/jackson-kunde-9b8508209/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jacksonkunde/" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
         </ul>
-    </nav>
+      </nav>
 
   <div class="container">
     <h1>Projects</h1>
@@ -44,6 +51,28 @@
                 <p>Here, I implement a decoder only language model using Pytorch, 
                     build a trainer to train the model on a small dataset, 
                     and show how to load the GPT-2 weights.</p>
+            </div>
+        </div>
+    </a>
+    <a href="ppo.html" target="_blank" style="text-decoration: none; color: black;">
+        <div class="experience">
+            <div class="thumbnail project-thumbnail">
+                <img src="resources/ppo_peanuts.jpeg" alt="Generalization Bounds Image" class="project-img" style="border-radius: 25%;">
+            </div>
+            <div class="details">
+                <h3>Proximal Policy Optimization Implementation<span class="date"> February 2024</span></h3>
+                <p>Here, I implement PPO and show it working for breakout and cartpole. </p>
+            </div>
+        </div>
+    </a>
+    <a href="dogsncats.html" target="_blank" style="text-decoration: none; color: black;">
+        <div class="experience">
+            <div class="thumbnail project-thumbnail">
+                <img src="resources/classifier_snoopy.jpeg" alt="Generalization Bounds Image" class="project-img" style="border-radius: 25%;">
+            </div>
+            <div class="details">
+                <h3>CNN Classifier<span class="date"> June 2023</span></h3>
+                <p>Here, I use a CNN to classifiy cats and dogs and integrate it with a flask webapp.</p>
             </div>
         </div>
     </a>
