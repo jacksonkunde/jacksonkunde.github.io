@@ -332,7 +332,7 @@ h2.personal {
 }
 
 .course .description-container {
-    width: calc(40% - 20px); /* Adjusted width to take up more space */
+    width: calc(45% - 10px); /* Adjusted width to take up more space */
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -341,17 +341,17 @@ h2.personal {
 }
 
 .course .description-container h2 {
-    font-size: 20px; /* Adjust the font size for the course title */
+    font-size: 24px; /* Adjust the font size for the course title */
     margin-bottom: 10px; /* Add margin bottom for better spacing */
 }
 
 .course .description-container p {
-    font-size: 16px; /* Adjust the font size for the course description */
+    font-size: 20px; /* Adjust the font size for the course description */
 }
 
 @media (max-width: 768px) {
     .course .description-container {
-        width: calc(90% - 20px); /* Adjust the width for smaller screens */
+        width: calc(70% - 20px); /* Adjust the width for smaller screens */
     }
 }
 /* Table styles */
