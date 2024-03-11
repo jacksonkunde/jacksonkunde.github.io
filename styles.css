@@ -354,3 +354,73 @@ h2.personal {
         width: calc(90% - 20px); /* Adjust the width for smaller screens */
     }
 }
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    border-radius: 10px; /* Add border radius for a rounded appearance */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* Position for gradient overlay */
+}
+
+caption {
+    font-size: 24px; /* Adjust the font size for the caption */
+    font-weight: bold; /* Make the caption bold */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+}
+
+th, td {
+    padding: 10px; /* Increase padding for better spacing */
+    text-align: left;
+    border-bottom: 1px solid transparent; /* Add transparent border bottom */
+    border-right: 1px solid transparent; /* Add transparent border right */
+    position: relative; /* Position for gradient overlay */
+}
+
+th {
+    background-color: #006400; /* Dark green */
+    color: #fcfffc; /* White */
+    font-weight: bold; /* Make the headers bold */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+tr:hover {
+    background-color: transparent; /* Set background to transparent */
+}
+
+/* Alternate row color */
+tr:nth-child(even) {
+    background-color: rgba(0, 100, 0, 0.1); /* Light green */
+}
+
+/* Gradient overlay on hover */
+tr:hover td {
+    background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.1)); /* Gradient effect */
+}
+
+/* Adjust cell widths for better alignment */
+th:first-child,
+td:first-child {
+    width: 20%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 20%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 60%;
+}
+
+/* Add a shadow effect */
+table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+table:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
