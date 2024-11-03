@@ -1,0 +1,9 @@
+title: "Jackson Kunde's Site"
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+collections:
+  pages:
+    output: true
+permalink: pretty

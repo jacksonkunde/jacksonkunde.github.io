@@ -1,0 +1,18 @@
+---
+title: Projects
+layout: default
+permalink: /projects
+---
+<body>
+      <div class="container">
+        <h1>Projects</h1>
+        <a href="https://github.com/jacksonkunde/" target="_blank">
+            <img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" alt="GitHub Logo" style="width: 48px; height: 48px;">
+        </a>
+        {% for project in site.data.projects %}
+            {% include project_entry.html project=project %}
+        {% endfor %}
+    </div>    
+  </div>
+</body>
+</html>

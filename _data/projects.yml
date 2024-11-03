@@ -1,0 +1,47 @@
+- title: "Testing Generalization Bounds: How Good Is Theory in Practice?"
+  date: "February 2024"
+  url: "projects/generalization_bounds.html"
+  image: "/resources/peanuts_fcn.jpeg"
+  alt: "Generalization Bounds Image"
+  description: "Here, I test how the mathematical theory of generalization bounds works in practice."
+  highlight: true
+
+- title: "Language Transformer Implementation"
+  date: "January 2024"
+  url: "https://github.com/jacksonkunde/language-transformer/tree/main"
+  image: "/resources/language_model_peanuts.jpeg"
+  alt: "Language Transformer Image"
+  description: "Here, I implement a decoder-only language model using Pytorch, build a trainer to train the model on a small dataset, and show how to load the GPT-2 weights."
+  highlight: true
+
+- title: "Proximal Policy Optimization Implementation"
+  date: "February 2024"
+  url: "projects/ppo.html"
+  image: "/resources/ppo_peanuts.jpeg"
+  alt: "PPO Project Image"
+  description: "Here, I implement PPO and show it working for breakout and cartpole."
+  highlight: true
+
+- title: "Reinforcement Learning from Human Feedback Implementation"
+  date: "March 2024"
+  url: "projects/rlhf.html"
+  image: "/resources/rlhf_snoopy.jpeg"
+  alt: "RLHF Project Image"
+  description: "Here, I implement RLHF and show an example on GPT-2."
+  highlight: false
+
+- title: "Computers are learning to do math, but can they learn to think along the way?"
+  date: "March 2024"
+  url: "/resources/JUST_fall23_opinion.pdf"
+  image: "/resources/opinion_peanuts.jpeg"
+  alt: "Opinion Piece Image"
+  description: "This is an opinion I wrote for the Journal of Undergraduate Science and Technology in Fall 2023. It details computer-assisted proofs from early computers to new technologies like language models."
+  highlight: false
+
+- title: "CNN Classifier"
+  date: "June 2023"
+  url: "projects/dogsncats.html"
+  image: "/resources/classifier_snoopy.jpeg"
+  alt: "CNN Classifier Image"
+  description: "Here, I use a CNN to classify cats and dogs and integrate it with a Flask web app."
+  highlight: false

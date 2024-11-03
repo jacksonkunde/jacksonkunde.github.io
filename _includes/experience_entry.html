@@ -1,0 +1,9 @@
+<div class="experience">
+    <div class="thumbnail {{ experience.thumbnail_class }}">
+        <img src="{{ experience.image }}" alt="{{ experience.image_alt }}" class="{{ experience.image_class }}">
+    </div>
+    <div class="details">
+        <h3>{{ experience.title }} <span class="date">{{ experience.date }}</span></h3>
+        <p>{{ experience.description | markdownify }}</p>
+    </div>
+</div>

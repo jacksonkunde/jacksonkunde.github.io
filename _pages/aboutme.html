@@ -1,36 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#experience">Experiences</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="resources/kunde_jackson_resume_2024.pdf" target="_blank">Resume</a></li>
-            <li class="social-links">
-                <a href="https://www.linkedin.com/in/jacksonkunde/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/jacksonkunde/" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-        </ul>
-      </nav>
-
+---
+title: About Me
+layout: default
+permalink: /aboutme
+---
     <div class="container">
-        <h1>About Me</h1>
+        <h1>{{page.title}}</h1>
         <h2 class="personal">Background</h2>
         <div class="personal description-container">
             <div class="personal text">
                 <p>I grew up in the Bay Area in California, where I attended Menlo School in Atherton, CA.</p>
             </div>
             <div class="personal image">
-                <img src="resources/menlo.jpg">
+                <img src="{{ 'resources/menlo.jpg' | relative_url }}">
             </div>
         </div>
         <h2 class="personal">Interests</h2>
@@ -41,7 +22,7 @@
                 Here's an image I took of the flatirons last time I was in Boulder!</p>
             </div>
             <div class="personal image">
-                <img src="resources/flatirons.JPG" alt="Mock Trial" class="organization-image">
+                <img src="{{ 'resources/flatirons.JPG' | relative_url }}" alt="Mock Trial" class="organization-image">
             </div>
         </div>
         <div class="personal description-container">
@@ -51,7 +32,7 @@
                     at UCLA as one of the top-16 competitors in the country! <a href="https://law.ucla.edu/academics/centers/barry-cappello-program-trial-advocacy/trial-combat">The tournament is called Trial By Combat.</a></p>
             </div>
             <div class="personal image">
-                <img src="resources/nats_2023_1.JPEG" alt="Mock Trial" class="organization-image">
+                <img src="{{ 'resources/nats_2023_1.JPEG' | relative_url }}" alt="Mock Trial" class="organization-image">
             </div>
         </div>
         <div class="personal description-container" style="padding: -20px;">

@@ -1,0 +1,28 @@
+- name: "Home"
+  url: "/"
+
+- name: "Experiences"
+  url: "/#experience"
+
+- name: "Projects"
+  url: "/projects"
+
+- name: "About Me"
+  url: "/aboutme"
+
+- name: "Courses"
+  url: "/courses"
+
+- name: "Resume"
+  url: "/resources/kunde_jackson_resume_2024.pdf"
+  target: "_blank"
+
+- name: "LinkedIn"
+  url: "https://www.linkedin.com/in/jacksonkunde/"
+  icon: "fab fa-linkedin"
+  target: "_blank"
+
+- name: "GitHub"
+  url: "https://github.com/jacksonkunde/"
+  icon: "fab fa-github"
+  target: "_blank"

@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <ul>
+        {% for item in site.data.navbar %}
+            {% unless item.url == page.url %}
+                <li>
+                    <a href="{{ item.url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>
+                        {% if item.icon %}
+                            <i class="{{ item.icon }}"></i>
+                        {% else %}
+                            {{ item.name }}
+                        {% endif %}
+                    </a>
+                </li>
+            {% endunless %}
+        {% endfor %}
+    </ul>
+</nav>
