@@ -7,11 +7,11 @@
   highlight: true
 
 - title: "Language Transformer Implementation"
-  date: "January 2024"
-  url: "https://github.com/jacksonkunde/language-transformer/tree/main"
+  date: "November 2024"
+  url: "https://github.com/jacksonkunde/jtransformer"
   image: "/resources/language_model_peanuts.jpeg"
   alt: "Language Transformer Image"
-  description: "Here, I implement a decoder-only language model using Pytorch, build a trainer to train the model on a small dataset, and show how to load the GPT-2 weights."
+  description: "Here, I implement a decoder-only language model using Pytorch, and I build a trainer to train the model on a a shakespeare dataset."
   highlight: true
 
 - title: "Proximal Policy Optimization Implementation"
