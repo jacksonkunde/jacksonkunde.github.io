@@ -260,7 +260,6 @@ h2 {
     height: auto;
 }
 
-
 .experience {
     display: flex;
     align-items: center; /* Center the thumbnail vertically */
@@ -320,43 +319,38 @@ h2.personal {
     border-radius: 10px;
 }
 
-/* Course List Page */
-.course .container {
-    max-width: 1200px; /* Adjusted max-width */
+/* Main container for the course page */
+.course-container {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center;
 }
 
+/* Responsive grid layout */
 .course-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Changed justify-content to center */
-    gap: 20px; /* Add gap between the boxes */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0px 40px;
+    justify-items: center;
 }
 
-.course .description-container {
-    width: calc(45% - 10px); /* Adjusted width to take up more space */
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fcfffc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.description-container.course {
+    padding: 15px; /* Adjust as needed */
 }
 
-.course .description-container h2 {
-    font-size: 24px; /* Adjust the font size for the course title */
-    margin-bottom: 10px; /* Add margin bottom for better spacing */
+
+.course-container .course-grid .description-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.course .description-container p {
-    font-size: 20px; /* Adjust the font size for the course description */
+.course-container .course-grid .description-container p {
+    font-size: 18px; /* Reduced font size for description text */
+    line-height: 1.1; /* Increase line height for readability */
 }
 
-@media (max-width: 768px) {
-    .course .description-container {
-        width: calc(70% - 20px); /* Adjust the width for smaller screens */
-    }
-}
 /* Table styles */
 table {
     width: 100%;

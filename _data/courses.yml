@@ -1,0 +1,35 @@
+- title: "Theoretical Foundations of Large Scale Machine Learning"
+  description: "Graduate level machine learning course examining theoretical ideas and understanding how well they apply in practice. Covering topics such as optimization, generalization, modern architectures, and adversarial attacks."
+
+- title: "Matrix Methods in Machine Learning"
+  description: "Linear algebraic foundations of machine learning featuring applications of matrix methods from classification and clustering to denoising and neural networks."
+
+- title: "Artificial Intelligence"
+  description: "Broad overview of AI focused on knowledge-based search techniques and machine learning methods like neural networks, reinforcement learning, and natural language processing."
+
+- title: "Bioinformatics"
+  description: "Algorithms for computational problems in molecular biology including sequencing, alignment, modeling sequences, phylogenetic trees, and gene expression analysis."
+
+- title: "Linear Algebra II"
+  description: "Advanced linear algebra topics like diagonalization, Jordan form, inner product spaces, operators, bilinear forms, matrix norms."
+
+- title: "Real Analysis"
+  description: "Mathematical analysis of the real number system, sequences, limits, continuity, differentiation, integration, sequences and series of functions."
+
+- title: "Stochastic Processes"
+  description: "Discrete and continuous-time stochastic processes with applications to queuing, branching, and other models."
+
+- title: "Probability with Multivariable Calculus"
+  description: "Probability distributions, expectation, variance, multivariate probability, Markov’s and Chebyshev’s inequalities, laws of large numbers, central limit theorem."
+
+- title: "Proof-based Multivariable Calculus"
+  description: "Partial derivatives, multiple integrals, line and surface integrals."
+
+- title: "Data Structures & Algorithms III"
+  description: "Version control, self-balancing trees, unit testing, GUIs, HTML, JavaScript."
+
+- title: "Data Science II"
+  description: "Pandas, Matplotlib, search algorithms, web scraping, OOP, machine learning."
+
+- title: "Discrete Math"
+  description: "Logic, sets, relations, mathematical induction, invariants, algorithm analysis, recurrences, asymptotic growth."
