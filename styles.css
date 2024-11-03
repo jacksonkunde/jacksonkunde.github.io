@@ -260,8 +260,10 @@ h2 {
     height: auto;
 }
 
+
 .experience {
     display: flex;
+    align-items: center; /* Center the thumbnail vertically */
     margin: 10px;
     background-color: #fcfffc;
     border-radius: 20px;
@@ -269,6 +271,7 @@ h2 {
     overflow: hidden;
     transition: transform 0.3s; /* Add transition for smooth scaling */
 }
+
 
 .experience:hover {
     transform: scale(1.05); /* Enlarge the container on hover */
