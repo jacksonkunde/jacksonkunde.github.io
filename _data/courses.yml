@@ -1,5 +1,8 @@
+- title: "Foundation Models"
+  description: "Graduate-level machine learning course on the current state-of-the-art. Covering topics such as transformers, scaling laws, efficent training, alignment, multimodal models, diffusion models, and much more."
+
 - title: "Theoretical Foundations of Large Scale Machine Learning"
-  description: "Graduate level machine learning course examining theoretical ideas and understanding how well they apply in practice. Covering topics such as optimization, generalization, modern architectures, and adversarial attacks."
+  description: "Graduate-level machine learning course examining theoretical ideas and understanding how well they apply in practice. Covering topics such as optimization, generalization, modern architectures, and adversarial attacks."
 
 - title: "Matrix Methods in Machine Learning"
   description: "Linear algebraic foundations of machine learning featuring applications of matrix methods from classification and clustering to denoising and neural networks."
@@ -16,6 +19,9 @@
 - title: "Real Analysis"
   description: "Mathematical analysis of the real number system, sequences, limits, continuity, differentiation, integration, sequences and series of functions."
 
+- title: "Linear Optimization"
+  description: "Proving and understanding the simplex method."
+
 - title: "Stochastic Processes"
   description: "Discrete and continuous-time stochastic processes with applications to queuing, branching, and other models."
 
@@ -24,6 +30,9 @@
 
 - title: "Proof-based Multivariable Calculus"
   description: "Partial derivatives, multiple integrals, line and surface integrals."
+
+- title: "Introduction to Big Data Systems"
+  description: "Deployment (Docker), Networking, SQL Databases (MySQL), HDFS, Spark, Distributed Databases (Cassandra), Kafka, Big Query, Cloud Deployment"
 
 - title: "Data Structures & Algorithms III"
   description: "Version control, self-balancing trees, unit testing, GUIs, HTML, JavaScript."
