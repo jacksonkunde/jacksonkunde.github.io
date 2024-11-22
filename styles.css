@@ -132,6 +132,10 @@ h2 {
     overflow: hidden;
 }
 
+.details h3 {
+    margin-bottom: 0px;
+}
+
 .date {
     margin-left: auto;
     font-style: italic;

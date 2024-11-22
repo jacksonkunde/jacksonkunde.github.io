@@ -11,7 +11,7 @@
   url: "https://github.com/jacksonkunde/jtransformer"
   image: "/resources/language_model_peanuts.jpeg"
   alt: "Language Transformer Image"
-  description: "Here, I implement a decoder-only language model using Pytorch, and I build a trainer to train the model on a a shakespeare dataset."
+  description: "Here, I implement a decoder-only language model using Pytorch, and I build a trainer to train the model on a shakespeare dataset."
   highlight: true
 
 - title: "Proximal Policy Optimization Implementation"
@@ -22,13 +22,21 @@
   description: "Here, I implement PPO and show it working for breakout and cartpole."
   highlight: true
 
+# - title: "Reinforcement Learning from Human Feedback Implementation"
+#   date: "March 2024"
+#   url: "projects/rlhf.html"
+#   image: "/resources/rlhf_snoopy.jpeg"
+#   alt: "RLHF Project Image"
+#   description: "Here, I implement RLHF and show an example on GPT-2."
+#   highlight: false
+
 - title: "Reinforcement Learning from Human Feedback Implementation"
-  date: "March 2024"
-  url: "projects/rlhf.html"
+  date: "November 2024"
+  url: "https://github.com/jacksonkunde/jrlhf"
   image: "/resources/rlhf_snoopy.jpeg"
   alt: "RLHF Project Image"
-  description: "Here, I implement RLHF and show an example on GPT-2."
-  highlight: false
+  description: "Here, I implement RLHF using my own transformer implementation and a simple policy gradient algorithm."
+  highlight: true
 
 - title: "Computers are learning to do math, but can they learn to think along the way?"
   date: "March 2024"
