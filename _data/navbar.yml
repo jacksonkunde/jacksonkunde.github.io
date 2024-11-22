@@ -13,7 +13,7 @@
 - name: "Courses"
   url: "/courses"
 
-- name: "Resume"
+- name: "Résumé"
   url: "/resources/kunde_jackson_resume_2024.pdf"
   target: "_blank"
 
