@@ -1,0 +1,5 @@
+_site
+_site/*
+Gemfile*
+.DS_Store
+resources/favicon_io.zip
