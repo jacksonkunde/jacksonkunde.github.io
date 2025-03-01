@@ -7,9 +7,10 @@ permalink: /
 <div class="container">
     <h1>Jackson Kunde</h1>
     <div class="image-container">
-        <img src="{{ 'resources/profile-removebg.png' | relative_url }}" alt="Photo of Jackson Kunde" class="profile-image">
+        <img src="{{ 'resources/profile-removebg.png' | relative_url }}" alt="Photo of Jackson Kunde"
+            class="profile-image">
     </div>
-    
+
     <div class="description-container">
         <div class="description">
             <p>
@@ -20,22 +21,27 @@ permalink: /
 </div>
 
 <div id="experience" class="container">
-    <a href="#experience" style="text-decoration: none;"><h2>Current Work</h2></a>
+    <a href="#experience" style="text-decoration: none;">
+        <h2>Current Work</h2>
+    </a>
     {% for experience in site.data.experiences %}
-        {% include experience_entry.html experience=experience %}
+    {% include experience_entry.html experience=experience %}
     {% endfor %}
     <div class="resume-container">
-        <p>For all of my work experience, see my <a href="{{ 'resources/kunde_jackson_resume_2024.pdf' | relative_url }}" target="_blank">resume</a>.</p>
+        <p>For all of my work experience, see my <a href="{{ 'resources/kunde_resume_2025.pdf' | relative_url }}"
+                target="_blank">resume</a>.</p>
     </div>
 </div>
 
 <div id="projects" class="container">
-    <a href="#projects" style="text-decoration: none;"><h2>Project Highlights</h2></a>
+    <a href="#projects" style="text-decoration: none;">
+        <h2>Project Highlights</h2>
+    </a>
     <div class="container">
         {% for project in site.data.projects %}
-            {% if project.highlight %}
-                {% include project_entry.html project=project %}
-            {% endif %}
+        {% if project.highlight %}
+        {% include project_entry.html project=project %}
+        {% endif %}
         {% endfor %}
     </div>
     <div class="project-container">

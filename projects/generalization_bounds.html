@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title</title>
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="icon" href="resources/ai_snoopy.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Include MathJax script -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="resources/ai_snoopy.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include MathJax script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-  
+
 <body>
     <nav class="navbar">
         <ul>
@@ -20,76 +21,95 @@
             <li><a href="../projects.html">Projects</a></li>
             <li><a href="../personal.html">About Me</a></li>
             <li><a href="../courses.html">Courses</a></li>
-            <li><a href="../resources/kunde_jackson_resume_2024.pdf" target="_blank">Resume</a></li>
+            <li><a href="../resources/kunde_resume_2025.pdf" target="_blank">Resume</a></li>
             <li class="social-links">
                 <a href="https://www.linkedin.com/in/jacksonkunde/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/jacksonkunde/" target="_blank"><i class="fab fa-github"></i></a>
             </li>
         </ul>
-      </nav>
-    
-  <div class="container">
-    <h1>Testing Generalization Bounds: How Good Is Theory in Practice?</h1>
-    <a href="https://github.com/jacksonkunde/generalization_bounds" target="_blank">
-        <img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" alt="GitHub Logo" style="width: 64px; height: 64px;">
-      </a>
-    <div class="project-details">
-        <div class="description-container">
-            <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/collected_gen_bounds.png?raw=true" alt="Project Image" class="project-img" style="max-width: 75%; height: auto;">
-        </div>
-        <div class="description-container">
-            <h2>Project Overview</h2>
-            <div class="overview-container">
-                <p>
-                  Researchers have sought to understand whether there are any provable guarantees regarding 
-                  how well a model will generalize. That is, how well your training accuracy will transfer to your test accuracy. 
-                  Researchers have formulated a variety of principled approaches to determine this bound, such as the Vapnik-Chervonenkis-dimension (VC-dimension)
-                  and the Rademacher complexity. The math guiding these bounds is quite complex. Interestingly, we can develop a similar quality bound
-                  with a much simpler approach using Hoeffding's inequality.
-                </p>
-  
-                <p>
-                  Going over the details quickly:
-                  \[ P(\epsilon_{\text{gen}}[h] \geq \epsilon) \leq 2\cdot e^{-2\epsilon^2} \]
-                  Applying the union bound, we can bound any member of our hypothesis class by \( |\mathcal{H}| \cdot 2\cdot e^{-2\epsilon^2} \)
-                  We can then show that for any element in our hypothesis class \( \epsilon_{\text{gen}} = O(\sqrt{\frac{d}{n}}) \), where \( d \) is the parameter count and \( n \) is the number of 'training examples'.
-                  Given this bound, it is only reasonable to ask how well this bound holds in practice. This project seeks to answer that question.
-                </p>
-              </div>
-        </div>
-        <div class="description-container">
-            <h3>Emperical Setup</h3>
-            <div class="overview-container">
-                <p>
-                    To explore how well this generalization bound holds in practice, I trained a linear binary classifier, a linear multi-class classifier, and a neural network with a single hidden layer on MNIST dataset 
-                    (the binary classifier was trainined only on the 0s and 1s of MNIST). First, I seperated the dataset into train and test data. Then for each classifier I trained on subsets of the 
-                    training data containing \(n\) data points, tested on the fixed test data, and recorded the training and test loss as well as the generalization gap (train accuracy - test accuracy).
-                    To ensure that the results were not due to the specific train-test split, I repeated the experiment 5 times with a random data shuffled each time. The results for each model are shown below.
-                </p>
+    </nav>
+
+    <div class="container">
+        <h1>Testing Generalization Bounds: How Good Is Theory in Practice?</h1>
+        <a href="https://github.com/jacksonkunde/generalization_bounds" target="_blank">
+            <img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" alt="GitHub Logo"
+                style="width: 64px; height: 64px;">
+        </a>
+        <div class="project-details">
+            <div class="description-container">
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/collected_gen_bounds.png?raw=true"
+                    alt="Project Image" class="project-img" style="max-width: 75%; height: auto;">
             </div>
-        </div>
-        <!-- Subsection for Single layer NN -->
-        <div class="description-container">
-            <h2>Single Layer NN</h2>
-            <div>
-                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_SLNN.png?raw=true" alt="Single Layer NN Generalization Gap" class="project-img">
-                <!-- <p class="image-description">Description for Image 1</p> -->
+            <div class="description-container">
+                <h2>Project Overview</h2>
+                <div class="overview-container">
+                    <p>
+                        Researchers have sought to understand whether there are any provable guarantees regarding
+                        how well a model will generalize. That is, how well your training accuracy will transfer to your
+                        test accuracy.
+                        Researchers have formulated a variety of principled approaches to determine this bound, such as
+                        the Vapnik-Chervonenkis-dimension (VC-dimension)
+                        and the Rademacher complexity. The math guiding these bounds is quite complex. Interestingly, we
+                        can develop a similar quality bound
+                        with a much simpler approach using Hoeffding's inequality.
+                    </p>
+
+                    <p>
+                        Going over the details quickly:
+                        \[ P(\epsilon_{\text{gen}}[h] \geq \epsilon) \leq 2\cdot e^{-2\epsilon^2} \]
+                        Applying the union bound, we can bound any member of our hypothesis class by \( |\mathcal{H}|
+                        \cdot 2\cdot e^{-2\epsilon^2} \)
+                        We can then show that for any element in our hypothesis class \( \epsilon_{\text{gen}} =
+                        O(\sqrt{\frac{d}{n}}) \), where \( d \) is the parameter count and \( n \) is the number of
+                        'training examples'.
+                        Given this bound, it is only reasonable to ask how well this bound holds in practice. This
+                        project seeks to answer that question.
+                    </p>
+                </div>
             </div>
-            <div>
-                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_loss_SLNN.png?raw=true" alt="Single Layer NN Train-Test Loss" class="project-img">
-                <!-- <p class="image-description">Description for Image 2</p> -->
+            <div class="description-container">
+                <h3>Emperical Setup</h3>
+                <div class="overview-container">
+                    <p>
+                        To explore how well this generalization bound holds in practice, I trained a linear binary
+                        classifier, a linear multi-class classifier, and a neural network with a single hidden layer on
+                        MNIST dataset
+                        (the binary classifier was trainined only on the 0s and 1s of MNIST). First, I seperated the
+                        dataset into train and test data. Then for each classifier I trained on subsets of the
+                        training data containing \(n\) data points, tested on the fixed test data, and recorded the
+                        training and test loss as well as the generalization gap (train accuracy - test accuracy).
+                        To ensure that the results were not due to the specific train-test split, I repeated the
+                        experiment 5 times with a random data shuffled each time. The results for each model are shown
+                        below.
+                    </p>
+                </div>
             </div>
+            <!-- Subsection for Single layer NN -->
+            <div class="description-container">
+                <h2>Single Layer NN</h2>
+                <div>
+                    <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_SLNN.png?raw=true"
+                        alt="Single Layer NN Generalization Gap" class="project-img">
+                    <!-- <p class="image-description">Description for Image 1</p> -->
+                </div>
+                <div>
+                    <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_loss_SLNN.png?raw=true"
+                        alt="Single Layer NN Train-Test Loss" class="project-img">
+                    <!-- <p class="image-description">Description for Image 2</p> -->
+                </div>
             </div>
         </div>
         <!-- Subsection for Multi-class Linear Classifier -->
         <div class="description-container">
             <h2>Multi-class Linear Classifier</h2>
             <div>
-                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_multiclass.png?raw=true" alt="Multi-class Linear Classifier Generalization Gap" class="project-img">
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_multiclass.png?raw=true"
+                    alt="Multi-class Linear Classifier Generalization Gap" class="project-img">
                 <!-- <p class="image-description">Description for Image 1</p> -->
             </div>
             <div>
-                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_loss_multiclass.png?raw=true" alt="Multi-class Linear Classifier Train-Test Loss" class="project-img">
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_loss_multiclass.png?raw=true"
+                    alt="Multi-class Linear Classifier Train-Test Loss" class="project-img">
                 <!-- <p class="image-description">Empirical </p> -->
             </div>
 
@@ -98,15 +118,18 @@
         <div class="description-container">
             <h2>Binary Class Linear Classifier</h2>
             <div>
-                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_binary.png?raw=true" alt="Binary Class Linear Classifier Generalization Gap" class="project-img">
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/gen_gap_binary.png?raw=true"
+                    alt="Binary Class Linear Classifier Generalization Gap" class="project-img">
                 <!-- <p class="image-description">Description for Image 1</p> -->
             </div>
             <div>
-                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_gap_binary.png?raw=true" alt="Binary Class Linear Classifier Train-Test Loss" class="project-img">
+                <img src="https://github.com/jacksonkunde/generalization_bounds/blob/main/images/train_test_gap_binary.png?raw=true"
+                    alt="Binary Class Linear Classifier Train-Test Loss" class="project-img">
                 <!-- <p class="image-description">Description for Image 2</p> -->
             </div>
         </div>
     </div>
-  </div>
+    </div>
 </body>
+
 </html>

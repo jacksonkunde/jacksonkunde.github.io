@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title</title>
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="icon" href="resources/ai_snoopy.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Include MathJax script -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="resources/ai_snoopy.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include MathJax script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-  
+
 <body>
     <nav class="navbar">
         <ul>
@@ -21,7 +22,7 @@
             <li><a href="../projects.html">Projects</a></li>
             <li><a href="../personal.html">About Me</a></li>
             <li><a href="../courses.html">Courses</a></li>
-            <li><a href="../resources/kunde_jackson_resume_2024.pdf" target="_blank">Resume</a></li>
+            <li><a href="../resources/kunde_resume_2025.pdf" target="_blank">Resume</a></li>
             <li class="social-links">
                 <a href="https://www.linkedin.com/in/jacksonkunde/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/jacksonkunde/" target="_blank"><i class="fab fa-github"></i></a>
@@ -29,144 +30,165 @@
         </ul>
     </nav>
 
-  <div class="container">
-    <h1>Reinforcement Learning from Human Feedback</h1>
-    <a href="https://github.com/jacksonkunde/rlhf" target="_blank">
-        <img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" alt="GitHub Logo" style="width: 48px; height: 48px;">
-      </a>
-    <div class="project-details">
-        <div class="description-container">
-            <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/rlhf/rlhf.png" alt="Project Image" class="project-img" style="max-width: 75%; height: auto;">
-            <p style="font-size: 12px;">Credit: Huggingface</p>
-        </div>
-        <div class="description-container">
-            <h2>Project Overview</h2>
-            <div class="overview-container">
-                <p>
-                 Here, I implement a popular deep algorithm for aligning and training language models called Reinforcement Learning from Human Feedback [RLHF].
-                 This implementation really gets into the details, you should check it out. I demonstrate how we can train a language model to exhibit different
-                 behaviors based a reward function.
+    <div class="container">
+        <h1>Reinforcement Learning from Human Feedback</h1>
+        <a href="https://github.com/jacksonkunde/rlhf" target="_blank">
+            <img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" alt="GitHub Logo"
+                style="width: 48px; height: 48px;">
+        </a>
+        <div class="project-details">
+            <div class="description-container">
+                <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/rlhf/rlhf.png"
+                    alt="Project Image" class="project-img" style="max-width: 75%; height: auto;">
+                <p style="font-size: 12px;">Credit: Huggingface</p>
+            </div>
+            <div class="description-container">
+                <h2>Project Overview</h2>
+                <div class="overview-container">
+                    <p>
+                        Here, I implement a popular deep algorithm for aligning and training language models called
+                        Reinforcement Learning from Human Feedback [RLHF].
+                        This implementation really gets into the details, you should check it out. I demonstrate how we
+                        can train a language model to exhibit different
+                        behaviors based a reward function.
+                    </p>
+                </div>
+            </div>
+            <div class="description-container" style="padding: 10px;">
+                <h2>Results with '.' Reward Function</h2>
+                <p>We define our reward function as the number of periods in the generated text.
+                    It seems silly, but this will give us a sense of how our reward function changes
+                    our generated text.
                 </p>
-              </div>
-        </div>
-        <div class="description-container" style="padding: 10px;">
-            <h2>Results with '.' Reward Function</h2>
-            <p>We define our reward function as the number of periods in the generated text.
-                It seems silly, but this will give us a sense of how our reward function changes
-                our generated text.
-            </p>
-            <p>
-                The following tables show how RLHF changes the model's generation, in this case GPT-2, conditioned on the phrase "This is"
-            </p>
-            <!-- Table 1 -->
-            <table>
-                <caption>Phase 000/200, Mean reward: 1.3945</caption>
-                <colgroup>
-                    <col style="width: 10%">
-                    <col style="width: 90%">
-                </colgroup>
-                <tr>
-                    <th>Reward</th>
-                    <th>Generated Text</th>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>'This is a serious problem for us. We have to start making the case in front of the European Parliament that it is acceptable for us to do this. It'</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>'This is a list of all the Super Mario Bros. games and their respective creator(s). If you have any suggestions for some of these games, please share'</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>'This is a very good product and if you can afford to buy it, do. This is a very good product and if you can afford to buy it,'</td>
-                </tr>
-            </table>
-            <p>Alright, here is our starting point <td>&#x2B06;&#xFE0F;</td></p>
-        
-            <!-- Table 2 -->
-            <table>
-                <caption>Phase 051/200, Mean reward: 3.3945</caption>
-                <colgroup>
-                    <col style="width: 10%">
-                    <col style="width: 90%">
-                </colgroup>
-                <tr>
-                    <th>Reward</th>
-                    <th>Generated Text</th>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>'This is not a nuclear test," he said, according to the BBC. "We\'ve been doing this for years. We\'ve never seen anything like it in'</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>'This is the first time we have seen a systematic collection of images of human body parts in a comprehensive scientific study.\n\nThe photographs were taken from public and'</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>'This is not how the U.S. government operates. The Obama administration is not a democracy. It is a dictator. And the U.S. is'</td>
-                </tr>
-            </table>
-            <p>After 50 phases there isn't much change  <span>&#x1F504;</span>
-            
-            <!-- Table 3 -->
-            <table>
-                <caption>Phase 101/200, Mean reward: 4.3359</caption>
-                <colgroup>
-                    <col style="width: 10%">
-                    <col style="width: 90%">
-                </colgroup>
-                <tr>
-                    <th>Reward</th>
-                    <th>Generated Text</th>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>'This is not a joke. The U.S. spends more money on defense than any other country in the world. But the U.S. is also'</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>'This is not a joke. The United Nations says that they have a war on cancer. The U.S. government is accused of torture, and the U'</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>'This is the first time the U.S. has sent a nuclear weapon to a country in the Middle East. The nuclear-armed U.S. submarine'</td>
-                </tr>
-            </table>
-            <p>Now we see that sentences are getting shorter, and the model is using abbreviations for more '.'  <span>&#x1F4C9;</span></p>
+                <p>
+                    The following tables show how RLHF changes the model's generation, in this case GPT-2, conditioned
+                    on the phrase "This is"
+                </p>
+                <!-- Table 1 -->
+                <table>
+                    <caption>Phase 000/200, Mean reward: 1.3945</caption>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 90%">
+                    </colgroup>
+                    <tr>
+                        <th>Reward</th>
+                        <th>Generated Text</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>'This is a serious problem for us. We have to start making the case in front of the European
+                            Parliament that it is acceptable for us to do this. It'</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>'This is a list of all the Super Mario Bros. games and their respective creator(s). If you
+                            have any suggestions for some of these games, please share'</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>'This is a very good product and if you can afford to buy it, do. This is a very good
+                            product and if you can afford to buy it,'</td>
+                    </tr>
+                </table>
+                <p>Alright, here is our starting point <td>&#x2B06;&#xFE0F;</td>
+                </p>
 
-            <!-- Table 4 -->
-            <table>
-                <caption>Phase 198/200, Mean reward: 6.1250</caption>
-                <colgroup>
-                    <col style="width: 10%">
-                    <col style="width: 90%">
-                </colgroup>
-                <tr>
-                    <th>Reward</th>
-                    <th>Generated Text</th>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>'This is how the U.S. has become a major partner in the war on terror. The U.S. is a major partner in the war on'</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>'This is not the case with the U.S. government. The U.S. government is a global leader. The U.S. government is a'</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>'This is a big step forward for the U.S. in terms of the international arena. The U.S. has a huge reputation in the world.'</td>
-                </tr>
-            </table>
-            <p>And it is pretty consistant around the final phase of our training <span>&#x1F3AF;</span></p>
+                <!-- Table 2 -->
+                <table>
+                    <caption>Phase 051/200, Mean reward: 3.3945</caption>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 90%">
+                    </colgroup>
+                    <tr>
+                        <th>Reward</th>
+                        <th>Generated Text</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>'This is not a nuclear test," he said, according to the BBC. "We\'ve been doing this for
+                            years. We\'ve never seen anything like it in'</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>'This is the first time we have seen a systematic collection of images of human body parts
+                            in a comprehensive scientific study.\n\nThe photographs were taken from public and'</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>'This is not how the U.S. government operates. The Obama administration is not a democracy.
+                            It is a dictator. And the U.S. is'</td>
+                    </tr>
+                </table>
+                <p>After 50 phases there isn't much change <span>&#x1F504;</span>
+
+                    <!-- Table 3 -->
+                <table>
+                    <caption>Phase 101/200, Mean reward: 4.3359</caption>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 90%">
+                    </colgroup>
+                    <tr>
+                        <th>Reward</th>
+                        <th>Generated Text</th>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>'This is not a joke. The U.S. spends more money on defense than any other country in the
+                            world. But the U.S. is also'</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>'This is not a joke. The United Nations says that they have a war on cancer. The U.S.
+                            government is accused of torture, and the U'</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>'This is the first time the U.S. has sent a nuclear weapon to a country in the Middle East.
+                            The nuclear-armed U.S. submarine'</td>
+                    </tr>
+                </table>
+                <p>Now we see that sentences are getting shorter, and the model is using abbreviations for more '.'
+                    <span>&#x1F4C9;</span>
+                </p>
+
+                <!-- Table 4 -->
+                <table>
+                    <caption>Phase 198/200, Mean reward: 6.1250</caption>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 90%">
+                    </colgroup>
+                    <tr>
+                        <th>Reward</th>
+                        <th>Generated Text</th>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>'This is how the U.S. has become a major partner in the war on terror. The U.S. is a major
+                            partner in the war on'</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>'This is not the case with the U.S. government. The U.S. government is a global leader. The
+                            U.S. government is a'</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>'This is a big step forward for the U.S. in terms of the international arena. The U.S. has a
+                            huge reputation in the world.'</td>
+                    </tr>
+                </table>
+                <p>And it is pretty consistant around the final phase of our training <span>&#x1F3AF;</span></p>
+            </div>
+            <div class="description-container">
+                <p>I am currently working to test more reward functions with a greater variety of
+                    training data. So stay tuned for that!
+                </p>
+            </div>
         </div>
-        <div class="description-container">
-            <p>I am currently working to test more reward functions with a greater variety of 
-                training data. So stay tuned for that!
-            </p>
-        </div>
-    </div>
 </body>
+
 </html>
